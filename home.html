@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kulture Clothing</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #4f69d0; color: #000000;">
+
+    <header style="background-color: #fff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); padding: 10px 0;">
+        <nav style="display: flex; justify-content: center;">
+            <ul style="list-style: none; display: flex;">
+                <li style="margin: 0 20px;"><a href="home.html" style="text-decoration: none; color: #333;">Home</a></li>
+                <li style="margin: 0 20px;"><a href="login.html" style="text-decoration: none; color: #333;">Login</a></li>
+                <li style="margin: 0 20px;"><a href="about.html" style="text-decoration: none; color: #333;">About Us</a></li>
+                <li style="margin: 0 20px;"><a href="special.html" style="text-decoration: none; color: #333;">Special Offers</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero" style="text-align: center; padding: 100px 0; background-color: #f9f9f9;">
+        <h1>Welcome to Kulture</h1>
+        <p>Your one-stop destination for stylish clothing.</p>
+    </section>
+    
+    <section class="featured-products" style="text-align: center; padding: 50px 0;">
+        <h2>Featured Products</h2>
+        <div class="product">
+            <img src="one.jpg.jpg" alt="Product 1" style="max-width: 100%; height: auto;" onclick="showImageModal('one.jpg.jpg')">
+            <h3>Oversized tee white</h3>
+            <p>Look fresh and comfy in our 200gsm oversize article available in all sizes.</p>
+            <button style="background-color: #333; color: #fff; border: none; padding: 10px 20px; cursor: pointer;">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="two.jpg.jpg" alt="Product 2" style="max-width: 70%; height: 50%;" onclick="showImageModal('two.jpg.jpg')">
+            <h3> OFF white oversized tee</h3>
+            <p>Make a statement with our elegant Off white tee.</p>
+            <button style="background-color: #333; color: #fff; border: none; padding: 10px 20px; cursor: pointer;">Buy Now</button>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 20px 0; background-color: #333; color: #fff;">
+        <p>&copy; 2023 Kulture Clothing. All rights reserved.</p>
+    </footer>
+
+    <div id="imageModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8);">
+        <span onclick="closeImageModal()" style="position: absolute; top: 10px; right: 20px; font-size: 20px; color: #fff; cursor: pointer;">&times;</span>
+        <img id="modalImage" style="max-width: 90%; max-height: 90%; margin: auto; display: block; margin-top: 50px;">
+    </div>
+
+    <script>
+        function showImageModal(imageSrc) {
+            const modal = document.getElementById("imageModal");
+            const modalImage = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImage.src = imageSrc;
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
+
